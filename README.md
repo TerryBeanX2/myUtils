@@ -30,7 +30,7 @@ function radio_checkbox () {
 underscores_in_headers  on;
 //server中的代码段：
 location / {	
-    //设置了*还跨域失败多数是Header引起的
+    //设置了*还跨域失败多数是Header引起的，此处的值由需要填写，HEAD_INFO是自定义的东西
     add_header 'Access-Control-Allow-Headers' 'HEAD_INFO,Content-Type';
     add_header 'Access-Control-Allow-Origin' '*';
     add_header 'Access-Control-Allow-Credentials' 'true';
