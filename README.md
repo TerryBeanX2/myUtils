@@ -24,7 +24,7 @@ function radio_checkbox () {
     return false;
 }
 ```
-* nginx服务器实现跨域，极大提高前端效率，此为自用代码段，重点在于Access-Control-Allow-Headers
+* nginx服务器实现跨域，极大提高前端效率，重点在于Access-Control-Allow-Headers网上很难找到好的答案，这里已经解决
 ```javascript
 //允许自定义的header中带有下划线，我曾经被坑惨了..
 underscores_in_headers  on;
