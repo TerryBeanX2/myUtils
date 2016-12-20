@@ -26,16 +26,15 @@ function radio_checkbox () {
 ```
 * nginx服务器实现跨域，极大提高前端效率，此为自用代码段，重点在于Access-Control-Allow-Headers
 ```javascript
-location / {
-		
-			add_header 'Access-Control-Allow-Headers' 'HEAD_INFO,Content-Type';
-			add_header 'Access-Control-Allow-Origin' '*';
-			add_header 'Access-Control-Allow-Credentials' 'true';
-			add_header 'Access-Control-Allow-Methods' 'GET,POST';
-			//保留参数			
-            #rewrite  ^.+apis/?(.*)$ /$1 break;
-			include  uwsgi_params;	
-            //反向地址			
-            proxy_pass   http://[your link];
-        }
+location / {	
+    add_header 'Access-Control-Allow-Headers' 'HEAD_INFO,Content-Type';
+    add_header 'Access-Control-Allow-Origin' '*';
+    add_header 'Access-Control-Allow-Credentials' 'true';
+    add_header 'Access-Control-Allow-Methods' 'GET,POST';
+    //保留参数(前提/apis)			
+    #rewrite  ^.+apis/?(.*)$ /$1 break;
+    include  uwsgi_params;	
+    //反向地址			
+    proxy_pass   http://[your link];
+}
 ```
