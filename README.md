@@ -26,8 +26,12 @@ function radio_checkbox () {
 ```
 * nginx服务器实现跨域，极大提高前端效率，此为自用代码段，重点在于Access-Control-Allow-Headers
 ```javascript
+//允许自定义的header中带有下划线，我曾经被坑惨了..
+underscores_in_headers  on;
+//server中的代码段：
 location / {	
-    add_header 'Access-Control-Allow-Headers' 'HEAD_INFO,Content-Type';
+    //设置了*还跨域失败多数是Header引起的
+    add_header 'Access-Control-Allow-Headers' 'HEAD_INFO,Content-Type';
     add_header 'Access-Control-Allow-Origin' '*';
     add_header 'Access-Control-Allow-Credentials' 'true';
     add_header 'Access-Control-Allow-Methods' 'GET,POST';
