@@ -38,7 +38,7 @@ location / {
     //保留参数(前提/apis)			
     #rewrite  ^.+apis/?(.*)$ /$1 break;
     include  uwsgi_params;	
-    //反向地址			
+    //代理地址			
     proxy_pass   http://[your link];
 }
 ```
