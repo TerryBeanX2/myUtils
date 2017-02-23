@@ -24,7 +24,7 @@ function radio_checkbox () {
     return false;
 }
 ```
-* nginx跨域，极大提高前端组效率，重点在于Access-Control-Allow-Headers 很难搜..已经解决
+* nginx跨域配置文件中的片段，极大提高前端开发效率，重点在于Access-Control-Allow-Headers 很难搜..已经解决
 ```javascript
 //允许自定义的header中带有下划线，我曾经被坑惨了..
 underscores_in_headers  on;
