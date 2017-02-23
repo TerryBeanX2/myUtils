@@ -42,3 +42,29 @@ location / {
     proxy_pass   http://[your link];
 }
 ```
+* 摘抄一段自定义Event的写法，以后的项目写公共方法（类似模态框这类）适用
+```javascript
+var Event = {
+        on: function(eventName, callback){
+            if(!this[eventName]){
+                this[eventName] = [];
+            }
+            this[eventName].push(callback);
+        },
+        emit: function(eventName){
+            var that = this;
+            var params = arguments.length>1 ? Array.prototype.slice.call(arguments,1) : [];
+            if(that[eventName]){
+                Array.prototype.forEach.call(that[eventName],function(arg){
+                    arg.apply(self,params);
+                });
+            }
+        }
+    };
+
+    Event.on('test', function (result) {
+        console.log(result);
+    });
+
+    Event.emit('test','helloWorld'); // 输出 'hello world' 和 'test'
+```
