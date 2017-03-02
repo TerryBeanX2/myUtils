@@ -42,7 +42,7 @@ location / {
     proxy_pass   http://[your link];
 }
 ```
-* 摘抄一段自定义Event的写法，以后的项目写公共方法（类似模态框这类）适用
+* 摘抄一段自定义Event的写法，以后的用来写类似钩子的东西
 ```javascript
 var Event = {
         on: function(eventName, callback){
