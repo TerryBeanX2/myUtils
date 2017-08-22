@@ -16,9 +16,9 @@ formatBankcard(str)； //6214 1435 2323 4154 320
 var test1 = '1234567890'
 var format = test1.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 console.log(format) // 1,234,567,890
-```
-或者
-```javascript
+
+//或者
+
 (23333333).toLocaleString('en-US')  // 23,333,333
 ```
 * nginx跨域配置文件中的片段，重点在于Access-Control-Allow-Headers 很难搜...已经解决
