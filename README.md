@@ -17,6 +17,10 @@ var test1 = '1234567890'
 var format = test1.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 console.log(format) // 1,234,567,890
 ```
+或者
+```javascript
+(23333333).toLocaleString('en-US')  // 23,333,333
+```
 * nginx跨域配置文件中的片段，重点在于Access-Control-Allow-Headers 很难搜...已经解决
 ```javascript
 //允许自定义的header中带有下划线，我曾经被坑惨了..
