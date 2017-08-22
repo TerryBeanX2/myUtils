@@ -1,4 +1,5 @@
-#一些工作中写过的可能有用的代码片段
+# 一些工作中写过的可能有用的代码片段
+
 * 写了个格式化银行卡的方法
 ```javascript
 function formatBankcard(str){
