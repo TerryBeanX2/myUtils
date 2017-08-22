@@ -1,5 +1,5 @@
 #一些工作中写过的可能有用的代码片段
-* 2017.8.22写了个格式化银行卡的方法
+* 写了个格式化银行卡的方法
 ```javascript
 function formatBankcard(str){
     return str.split('').reduce((prev, next, index)=> {
@@ -9,6 +9,13 @@ function formatBankcard(str){
 
 let str = '6214143523234154320';
 formatBankcard(str)； //6214 1435 2323 4154 320
+```
+
+* 格式化货币的正则(借鉴来的)
+```javascript
+var test1 = '1234567890'
+var format = test1.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+console.log(format) // 1,234,567,890
 ```
 * nginx跨域配置文件中的片段，重点在于Access-Control-Allow-Headers 很难搜...已经解决
 ```javascript
