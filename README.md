@@ -10,7 +10,7 @@ function formatBankcard(str){
 let str = '6214143523234154320';
 formatBankcard(str)； //6214 1435 2323 4154 320
 ```
-* nginx跨域配置文件中的片段，极大提高前端开发效率，重点在于Access-Control-Allow-Headers 很难搜..已经解决
+* nginx跨域配置文件中的片段，重点在于Access-Control-Allow-Headers 很难搜...已经解决
 ```javascript
 //允许自定义的header中带有下划线，我曾经被坑惨了..
 underscores_in_headers  on;
