@@ -41,4 +41,32 @@ location / {
 }
 ```
 
+* 节流函数
+```javascript
+function throttle(fn, context) {
+    clearTimeout(fn.timeoutId);
+    fn.timeoutId = setTimeout(fn.bind(context), 500);
+}
+```
+
+* input中文键盘处理
+```javascript
+    input.addEventListener('compositionstart', fn);
+    input.addEventListener('compositionend', fn);
+```
+
+* 列表触底
+```javascript
+const body = document.body;
+const html = document.documentElement;
+body.onscroll = () => {
+    throttle(fnCheckListStop);
+    if (html.scrollHeight - html.clientHeight > 0) {
+      ((html.scrollHeight - html.clientHeight) <= (html.scrollTop || body.scrollTop)) && fnCheckListTouchBottom;
+    }
+}
+```
+
+
+
 
