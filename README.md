@@ -37,7 +37,7 @@ function throttle(fn, context) {
     input.addEventListener('compositionend', fn);
 ```
 
-* 列表触底
+* 列表停止滑动、触底
 ```javascript
 const body = document.body;
 const html = document.documentElement;
